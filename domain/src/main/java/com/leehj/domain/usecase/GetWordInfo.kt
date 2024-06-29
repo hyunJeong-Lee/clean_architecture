@@ -2,6 +2,7 @@ package com.leehj.domain.usecase
 
 import com.leehj.domain.entity.WordInfo
 import com.leehj.domain.repository.WordInfoRepository
+import com.leehj.domain.util.Result
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

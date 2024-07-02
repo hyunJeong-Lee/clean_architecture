@@ -11,9 +11,9 @@ import com.leehj.domain.entity.WordInfo
 @Entity // Room 엔티티로 선언. 클래스의 인스턴스가 DB 테이블의 행으로 저장
 data class WordInfoEntity(
     val word: String,
-    val phonetic: String,
-    val origin: String,
-    val meanings: List<Meaning>, //domain layer 에 의존하고 있기 때문에 Meaning 을 불러올 수 있다.
+    val phonetic: String?,
+    val origin: String?,
+    val meanings: List<Meaning>?, //domain layer 에 의존하고 있기 때문에 Meaning 을 불러올 수 있다.
     @PrimaryKey val id: Int? = null //기본키
 ){
     /*

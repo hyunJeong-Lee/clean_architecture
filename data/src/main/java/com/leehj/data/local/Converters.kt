@@ -15,7 +15,7 @@ class Converters {
     }
 
     @TypeConverter
-    fun meaningToJson(meanings: List<Meaning>): String{
+    fun meaningsToJson(meanings: List<Meaning>): String{
         return Gson().toJson(meanings)
 
     }

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.kapt)
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -48,6 +50,9 @@ android {
         }
     }
 }
+kapt{
+    correctErrorTypes = true
+}
 
 dependencies {
 
@@ -70,4 +75,8 @@ dependencies {
     // Domain, Data Layer 에 대한 의존성 추가.
     implementation(project(":domain"))
     implementation(project(":data"))
+
+    //hilt
+    implementation(libs.dagger.hilt)
+    kapt(libs.dagger.hilt.compiler)
 }

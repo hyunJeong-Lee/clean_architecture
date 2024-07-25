@@ -79,4 +79,20 @@ dependencies {
     //hilt
     implementation(libs.dagger.hilt)
     kapt(libs.dagger.hilt.compiler)
+
+    //gson
+    implementation(libs.gson)
+
+    //retrofit
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.retrofit2.kotlinx.serialization.converter)
+
+    //okhttp logging interceptor
+    implementation(libs.okhttp3.logging.interceptor)
+
+    // Room
+    implementation(libs.androidx.room.ktx)
+    kapt(libs.androidx.room.ktx.compiler)
+    implementation(libs.androidx.room.ktx.runtime)
 }
